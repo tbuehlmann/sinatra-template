@@ -17,4 +17,5 @@ error do
 end
 
 helpers do
+  # ...
 end
