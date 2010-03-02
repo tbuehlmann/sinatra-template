@@ -1,3 +1,3 @@
-require 'index'
+require 'application'
 
-run Sinatra::Application
+run Application
