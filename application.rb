@@ -1,18 +1,19 @@
 # encoding: utf-8
 
 require 'rubygems'
+require 'pathname'
 require 'sinatra/base'
 
 class Application < Sinatra::Base
   configure do
     enable :static
     
-    set :views, File.join(File.dirname(__FILE__), 'views')
-    set :public, File.join(File.dirname(__FILE__), 'public')
+    set :views, Pathname.new(__FILE__).dirname.join('views').expand_path
+    set :public, Pathname.new(__FILE__).dirname.join('public').expand_path
   end
   
   helpers do
-    # …
+    # ...
   end
   
   not_found do
