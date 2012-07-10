@@ -1,6 +1,5 @@
 # encoding: utf-8
 
-require 'rubygems'
 require 'haml'
 require 'sinatra/base'
 
@@ -9,11 +8,11 @@ class Application < Sinatra::Base
     enable :static
 
     set :views,  File.join(File.dirname(__FILE__), 'views')
-    set :public, File.join(File.dirname(__FILE__), 'public')
+    set :public_folder, File.join(File.dirname(__FILE__), 'public')
   end
 
   helpers do
-    # ...
+    # …
   end
 
   not_found do
@@ -28,4 +27,3 @@ class Application < Sinatra::Base
     haml :index
   end
 end
-
