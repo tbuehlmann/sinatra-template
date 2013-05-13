@@ -7,5 +7,8 @@ gem 'sinatra-kittens'
 group :development do
   gem 'pry', '~> 0.9'
   gem 'better_errors', '~> 0.8'
-  gem 'binding_of_caller', '~> 0.7'
+
+  platform :ruby do
+    gem 'binding_of_caller', '~> 0.7'
+  end
 end
